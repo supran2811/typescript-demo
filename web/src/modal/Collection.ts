@@ -5,7 +5,7 @@ export class Collection<T, K> {
   modal: T[] = [];
   events: Eventing = new Eventing();
 
-  constructor(public rootUrl, public deserializer: (json: K) => T) {}
+  constructor(public rootUrl: string, public deserializer: (json: K) => T) {}
 
   get on() {
     return this.events.on;
